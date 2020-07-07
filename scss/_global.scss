@@ -1,0 +1,105 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+  // font-family: 'Bad Script', cursive;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+section{
+  z-index: 9999999;
+  padding-left: 85px;
+  padding-right: 85px;
+  // max-width: 80vw;
+}
+.title-container{
+  background-image: url(../img/mazok-3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20vw;
+  margin-top: 7vw;
+}
+.title{
+  font-size: 80px;
+  width: fit-content;
+  margin: 0 auto;
+  color: rgba(231, 185, 185, 1);
+  font-family: 'GreatDay';
+  color: black;
+  padding-top: 10%;
+  // transform: translateY(-62%);
+}
+.subtitle{
+  width: 75%;
+  max-width: 700px;
+  margin:0 auto;
+  line-height: 30px;
+  text-indent: 1em;
+}
+.book-btn{
+  cursor: pointer;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+  padding-top: 2px;
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 60px;
+  border-radius: 23px;
+  margin-top: 50px;
+  animation: pulse 2s infinite;
+  transition: all .3s ease-in-out;
+}
+.book-btn:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+.on-page{
+  // visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-color: rgba(251, 207, 207, 0.7);
+  width: 260px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: none;
+  z-index: 1000;
+  font-size: 20px;
+  transition: all .5s ease-in-out;
+}
+.on-page:hover{
+  background-color: #fa9898;
+  color: black;
+}
+.right-line::after{
+  content: '';
+  position: absolute;
+  top: 58%;
+  right: -65px;
+  width: 50px;
+  border: 1px solid rgb(247, 160, 164);
+  z-index: 10;
+}
+.left-line::before{
+  content: '';
+  position: absolute;
+  top: 33%;
+  left: -55px;
+  width: 65px;
+  border: 1px solid rgb(247, 160, 164);
+  z-index: 10;
+}
+.bounceInLeft{
+  animation: fadeInLeft 1.5s ease;
+}
+
+// .backInRight{
+//   animation: backInRight 2s;
+// }
