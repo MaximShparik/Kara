@@ -1,36 +1,28 @@
 $(function(){
-  // $('.galery__slider').slick({
-  //   slidesToShow: 6,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   arrows: false
-  // });
-
-
-  $('.galery__slider-big').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.galery__slider'
+  $(window).on("scroll", function() {
+    if ($(window).scrollTop() > 800){
+      $('.on-page.book-btn').css('opacity','1')
+    } else {
+      $('.on-page.book-btn').css('opacity','0')
+    }
   });
-  $('.galery__slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.galery__slider-big',
-    autoplay: true,
-    // centerMode: true,
-    arrows: false,
-    focusOnSelect: true
-  });
-//   var rn = Math.floor((Math.random() * 150) + 60);
-// var rs = Math.floor((Math.random() * 11) + 4);
-// 	var t = new Trianglify({
-//  x_gradient: Trianglify.colorbrewer.Spectral[rs],
-//     noiseIntensity: 0,
-//     cellsize: rn
-// });
-// var pattern = t.generate(window.innerWidth, window.innerWidth+200);
-// document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slider__item");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "grid";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+  }
+
+  $('.pricing__item').on('click', function(){
+    $(this).find('.hide').addClass('bounceInLeft'),
+    $(this).find('.hide').css('visibility','visible')
+  })
 });
