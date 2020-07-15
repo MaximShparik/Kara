@@ -10,7 +10,7 @@ a{
   color: black;
 }
 section{
-  z-index: 9999999;
+  // z-index: 9999999;
   padding-left: 85px;
   padding-right: 85px;
   // max-width: 80vw;
@@ -42,8 +42,8 @@ section{
 .book-btn{
   cursor: pointer;
   max-width: 320px;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+  background-color: rgba(255, 199, 199, 0.4);
+  box-shadow: 0 0 50px rgba(255, 199, 199, 1);
   padding-top: 2px;
   height: 60px;
   font-size: 25px;
@@ -65,14 +65,15 @@ section{
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-color: rgba(251, 207, 207, 0.7);
+  background-color: rgba(242, 71, 71, 0.7);
+  box-shadow: 0 0 30px rgba(242, 71, 71, 1);
   width: 260px;
   height: 50px;
   line-height: 50px;
-  box-shadow: none;
   z-index: 1000;
   font-size: 20px;
   transition: all .5s ease-in-out;
+  z-index: 99999999;
 }
 .on-page:hover{
   background-color: #fa9898;
@@ -97,7 +98,7 @@ section{
   z-index: 10;
 }
 .bounceInLeft{
-  animation: fadeInLeft 1.5s ease;
+  animation: fadeInUp 1.5s ease;
 }
 
 // .backInRight{
