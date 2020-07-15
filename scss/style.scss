@@ -60,6 +60,12 @@
 
 
 .main{
+  // height: 100vh;
+  // background-image: url(../img/main-bg-8.png);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: top right;
+  // background-size: 60vw;
 }
 .main__block{
   position: absolute;
@@ -72,6 +78,7 @@
   // font-family: 'Marck Script', cursive;
   // font-family: 'Tangerine', cursive;
   // font-family: 'Allura', cursive;
+  text-shadow: 0 0 10px white;
   font-family: 'Alex Brush', cursive;
   color: rgba(255, 255, 255, 0.87);
 
@@ -81,7 +88,7 @@
   text-align: left;
   font-size: 50px;
   line-height: 50px;
-  // color: rgba(#000000, 1);
+  color: black;
   margin-bottom: 5px;
 }
 .main__text:nth-child(2){
@@ -89,7 +96,7 @@
   text-align: left;
   font-size: 100px;
   line-height: 100px;
-  color: rgba(#ffffff, 0.95);
+  color: black;
   margin-bottom: 5px;
   // font-family: 'Allura', cursive;
   // font-weight: 300;
@@ -99,7 +106,7 @@
   font-size: 50px;
   line-height: 50px;
   margin-top: -15px;
-  // color: rgba(#000000, 1);
+  color: black;
   margin-bottom: 5px;
   // font-family: 'Allura', cursive;
 }
@@ -113,10 +120,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  background-image: url(../img/about-us-bg.png);
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 50vw;
+  // background-image: url(../img/about-us-bg-5.png);
+  // background-repeat: no-repeat;
+  // background-position: left top;
+  // background-size: 60vw;
   // background-color: #ffded4;
   margin-top: 100px;
   padding-top: 100px;
@@ -133,9 +140,9 @@
     width: 33vw;
     height: 33vw;
     .block__img-container{
-      // background-image: url(../img/bg-photo-9.png);
-      // background-size: contain;
-      // background-repeat: no-repeat;
+      background-image: url(../img/bg-photo-5.png);
+      background-size: contain;
+      background-repeat: no-repeat;
       text-align: center;
       position: relative;
       .block__img{
@@ -163,9 +170,16 @@
         .block__text{
           font-size: 37px;
           font-family: "GreatDay";
+          // font-weight: bold;
           padding-top: 50%;
           transform: translateY(-60%);
           // padding-top:
+          span{
+            font-family: "GreatDay";
+            font-size: 47px;
+            margin-left: -8px;
+            // margin-top: 5px;
+          }
         }
       }
     }
@@ -417,6 +431,7 @@
   .title-container{
     width: 510px;
     margin: 0 auto;
+    margin-bottom: 40px;
   }
   .kontakt__block{
     display: grid;
@@ -428,18 +443,23 @@
     font-size: 22px;
     text-align: center;
     margin-bottom: 70px;
-    p:nth-child(2){
-      height: fit-content;
-      span{
-        position: relative;
+    form{
+      display: flex;
+      flex-direction: column;
+      *{
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        outline: none;
       }
-      span:after{
-        content: url(../img/arrow.png);
-        position: absolute;
-        transform: rotate(-45deg) scale(0.4);
-        height: 70px;
-        bottom: -133px;
-        right: -190px;
+      button{
+        width: fit-content;
+        padding: 3px 15px;
+        margin: 0 auto;
+        background-color: inherit;
+      }
+      input,textarea{
+        padding-left: 10px;
       }
     }
   }
