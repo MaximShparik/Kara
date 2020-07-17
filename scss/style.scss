@@ -140,7 +140,7 @@
     width: 33vw;
     height: 33vw;
     .block__img-container{
-      background-image: url(../img/bg-photo-5.png);
+      background-image: url(../img/about-photo-bg.png);
       background-size: contain;
       background-repeat: no-repeat;
       text-align: center;
@@ -167,16 +167,16 @@
         left: 50%;
         transform: translateX(-50%);
         // z-index: 10;
-        .block__text{
+        .block__text:first-child{
           font-size: 37px;
-          font-family: "GreatDay";
+          font-family: "GreatDayBold";
           // font-weight: bold;
           padding-top: 50%;
           transform: translateY(-60%);
           // padding-top:
           span{
             font-family: "GreatDay";
-            font-size: 47px;
+            font-size: 57px;
             margin-left: -8px;
             // margin-top: 5px;
           }
@@ -477,6 +477,12 @@
   src: url("../fonts/great_day/great_day_normal.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+}
+@font-face {
+  font-family: "GreatDayBold";
+  src: url("../fonts/great_day/great_day_bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 
