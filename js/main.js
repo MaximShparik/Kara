@@ -18,7 +18,7 @@ $(function(){
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "grid";
-    setTimeout(carousel, 3000); // Change image every 2 seconds
+    setTimeout(carousel, 300000); // Change image every 2 seconds
   }
 
   $('.pricing__item').on('click', function(){
